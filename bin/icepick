@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+# (C) Sean Callan (doomspork)
+# MIT license
+
+$0 = 'pry'
+
+begin
+  require 'icepick'
+rescue LoadError
+  require 'rubygems'
+  require 'icepick'
+end
+
+# Process command line options and run Pry
+Pry::CLI.parse_options
