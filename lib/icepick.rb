@@ -1,4 +1,6 @@
 require 'icepick/version'
+require 'icepick/config'
+require 'icepick/prompt'
 
 require 'pry'
 require 'pry-doc'
@@ -28,10 +30,10 @@ module Icepick
   #   * name: A name to use for the prompt
   #
   # Returns nothing
-  def self.initialize!(options = {})
+  def self.initialize!(name = nil)
     silence_warnings do
       # Set the prompt name, for the Railtie this is the application name
-      Pry.config.prompt_name = options[:name] || 'icepick'
+      Prompt.config.name = name if name
 
       # Use awesome_print for Pry output
       Pry.config.print = ->(output, value) do
@@ -39,7 +41,11 @@ module Icepick
         Pry::Helpers::BaseHelpers.stagger_output("=> #{pretty}", output)
       end
 
-      if defined?(PryDebugger) || defined?(PryByebug)
+      # Use Icepick's Prompt for Pry
+      Pry.config.prompt = [Prompt.main_prompt, Prompt.wait_prompt]
+
+      # Debugger shortcuts
+      if defined?(PryDebugger)
         Pry.commands.alias_command 'c', 'continue'
         Pry.commands.alias_command 's', 'step'
         Pry.commands.alias_command 'n', 'next'
@@ -50,13 +56,15 @@ module Icepick
 
   private
 
+  # Internal: Suppress warnings and errors
+  #
+  # Returns nothing
   def self.silence_warnings
     old_verbose, $VERBOSE = $VERBOSE, nil
     yield
   ensure
     $VERBOSE = old_verbose
   end
-
 end
 
 if defined?(Rails)

@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    icepick (0.1.0)
+    icepick (0.2.0)
       awesome_print (~> 1.2)
+      colorize (~> 0.6.0)
       pry (~> 0.9.12)
       pry-debugger (~> 0.2.2)
       pry-doc (~> 0.4.6)
@@ -31,6 +32,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.1.4)
     coderay (1.1.0)
+    colorize (0.6.0)
     columnize (0.3.6)
     debug_inspector (0.0.2)
     debugger (1.6.5)
