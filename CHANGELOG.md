@@ -1,3 +1,7 @@
+## 1.0.0 (2014-04-25)
+
+* Replaced pry-debugger with pry-byebug. This change breaks support for Ruby versions older than 2.0.0
+
 ## 0.2.0 (2014-01-01)
 
 * Prompt layout now more configurable.  Added a new dependency on [colorize][colorize].
@@ -9,7 +13,6 @@
 [pry]:                 http://pry.github.com
 [pry-doc]:             https://github.com/pry/pry-doc
 [pry-stack_explorer]:  https://github.com/pry/pry-stack_explorer
-[pry-debugger]:        https://github.com/nixme/pry-debugger
 [pry-byebug]:          https://github.com/deivid-rodriguez/pry-byebug
 [pry-rails]:           https://github.com/rweng/pry-rails
 [awesome_print]:       https://github.com/michaeldv/awesome_print

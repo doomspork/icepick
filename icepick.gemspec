@@ -17,12 +17,12 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
 
   # Dependencies
-  gem.required_ruby_version = '>= 1.9.2'
+  gem.required_ruby_version = '>= 2.0.0'
   gem.add_runtime_dependency 'pry',                 '~> 0.9.12'
   gem.add_runtime_dependency 'pry-doc',             '~> 0.4.6'
   gem.add_runtime_dependency 'pry-rails',           '~> 0.3.2'
   gem.add_runtime_dependency 'pry-stack_explorer',  '~> 0.4.9'
-  gem.add_runtime_dependency 'pry-debugger',        '~> 0.2.2'
+  gem.add_runtime_dependency 'pry-byebug',          '~> 1.3.2'
   gem.add_runtime_dependency 'colorize',            '~> 0.6.0'
   gem.add_runtime_dependency 'awesome_print',       '~> 1.2'
   gem.add_runtime_dependency 'railties',            '>= 3.0', '< 5.0'

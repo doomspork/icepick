@@ -2,7 +2,7 @@ Icepick
 =======
 © {[doomspork](https://github.com/doomspork)} 2014
 
-Current version is `0.2.0` [Changelog][changelog].
+Current version is `1.0.0` [Changelog][changelog].
 
 __Icepick__ bundles a set of useful tools, plugins, and configurations together:
 
@@ -13,7 +13,7 @@ __Icepick__ bundles a set of useful tools, plugins, and configurations together:
 * [Pry Rails][pry-rails] adds Rails helpers to Pry like `show-routes` and `show-models` 
 * [Awesome Print][awesome_print] colorizes and formats output
 
-Ruby 1.9.2+ only. Support included for Rails 3 and Rails 4. 
+Ruby 2.0.0+ only. Support included for Rails 3 and Rails 4. 
 
 ## Usage
 
@@ -70,7 +70,6 @@ Feel free to open [Issues][issues] or submit [Pull Requests][pullrequest] for co
 [pry]:                 http://pry.github.com
 [pry-doc]:             https://github.com/pry/pry-doc
 [pry-stack_explorer]:  https://github.com/pry/pry-stack_explorer
-[pry-debugger]:        https://github.com/nixme/pry-debugger
 [pry-byebug]:          https://github.com/deivid-rodriguez/pry-byebug
 [pry-rails]:           https://github.com/rweng/pry-rails
 [awesome_print]:       https://github.com/michaeldv/awesome_print

@@ -5,7 +5,7 @@ require 'icepick/prompt'
 require 'pry'
 require 'pry-doc'
 require 'pry-stack_explorer'
-require 'pry-debugger'
+require 'pry-byebug'
 require 'awesome_print'
 require 'readline'
 
