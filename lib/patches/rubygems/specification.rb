@@ -13,7 +13,7 @@ module Gem
           original_reset
         ensure
           $stderr = original_stderr
-          null_file.close
+          null_file.close unless null_file.nil?
         end 
       end
     end
