@@ -1,4 +1,4 @@
-# This is used to supress warnings about Unresolved specs during Gem::Specification.reset
+# This is used to suppress warnings about Unresolved specs during Gem::Specification.reset
 module Gem
   class Specification
     class << self
