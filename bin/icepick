@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-
+# This patch suppresses warnings about Unresolved specs during Gem::Specification.reset
+require 'patches/rubygems/specification'
 # (C) Sean Callan (doomspork)
 # MIT license
 
