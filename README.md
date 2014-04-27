@@ -1,19 +1,19 @@
 Icepick
 =======
-© {[doomspork](https://github.com/doomspork)} 2014
 
-Current version is `1.0.0` [Changelog][changelog].
+[![Gem Version](https://badge.fury.io/rb/icepick.png)](https://rubygems.org/gems/icepick) [![Code Climate](https://codeclimate.com/github/doomspork/icepick.png)](https://codeclimate.com/github/doomspork/icepick)
+
+[Changelog][changelog]
 
 __Icepick__ bundles a set of useful tools, plugins, and configurations together:
 
 * [Pry][pry] is a powerful alternative to IRB
 * [Pry Doc][pry-doc] includes documentation and source for Core Ruby components
-* [Pry Debugger][pry-debugger] brings the power of debugger to Pry 
+* [Pry Byebug][pry-byebug] brings the power of debugging to Pry 
 * [Pry Stack Explorer][pry-stack_explorer] adds support for call stack navigation
-* [Pry Rails][pry-rails] adds Rails helpers to Pry like `show-routes` and `show-models` 
 * [Awesome Print][awesome_print] colorizes and formats output
 
-Ruby 2.0.0+ only. Support included for Rails 3 and Rails 4. 
+Ruby 2.0.0+ only.
 
 ## Usage
 
@@ -32,17 +32,9 @@ if defined?(Icepick)
 end
 ```
 ------
-### `name`
-
-Configures the prompt name, defaults to `Icepick`
-
 ### `separator`
 
 Change the prompt separator to something other than the default: `>`
-
-### `formatted`
-
-Color and format the prompt, defaults to `true`
 
 ### `main_layout`
 
@@ -60,9 +52,17 @@ Configuration for the Pry wait prompt, defaults to `'{spaces} {separator} '`.  I
 * `spaces` - String of spaces equal to the length to the main prompt without the separator
 * `dots`   - Similar to the above but dots
 
-## Contributions
+## Contributing
 
-Feel free to open [Issues][issues] or submit [Pull Requests][pullrequest] for consideration.  
+Feedback and features welcome!  Please make use of [Issues](https://github.com/doomspork/orwell/issues) and [Pull Requests](https://github.com/doomspork/orwell/pulls), all code must have accompanying specs.
+
+## Author/Contact
+
+Icepick is written and maintained by [@doomspork](github.com/doomspork) with the help of [@jamesbrink](github.com/jamesbrink).
+
+## License
+
+Icepick is made available under the [MIT](http://opensource.org/licenses/MIT) License.
 
 [issues]:              https://github.com/doomspork/icepick/issues
 [pullrequest]:         https://github.com/doomspork/icepick/pulls
@@ -71,5 +71,4 @@ Feel free to open [Issues][issues] or submit [Pull Requests][pullrequest] for co
 [pry-doc]:             https://github.com/pry/pry-doc
 [pry-stack_explorer]:  https://github.com/pry/pry-stack_explorer
 [pry-byebug]:          https://github.com/deivid-rodriguez/pry-byebug
-[pry-rails]:           https://github.com/rweng/pry-rails
 [awesome_print]:       https://github.com/michaeldv/awesome_print

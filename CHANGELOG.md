@@ -1,3 +1,9 @@
+## 1.1.0 (2014-04-26)
+
+* Removed out-of-box support for Rails.  This includes removing pry-rails and railties dependencies.
+* Removed `formatted` configuration option; format all the things!
+* Removed `name` from prompt and configuration
+
 ## 1.0.0 (2014-04-25)
 
 * Replaced pry-debugger with pry-byebug. This change breaks support for Ruby versions older than 2.0.0
