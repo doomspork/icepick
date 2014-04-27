@@ -32,9 +32,6 @@ module Icepick
   # Returns nothing
   def self.initialize!(name = nil)
     silence_warnings do
-      # Set the prompt name, for the Railtie this is the application name
-      Prompt.config.name = name if name
-
       # Use awesome_print for Pry output
       Pry.config.print = ->(output, value) do
         pretty = value.ai(AWESOME_OPTS)
@@ -42,15 +39,16 @@ module Icepick
       end
 
       # Use Icepick's Prompt for Pry
-      Pry.config.prompt = [Prompt.main_prompt, Prompt.wait_prompt]
+      Pry.config.prompt = Prompt.pry_prompts
 
-      # Debugger shortcuts
-      if defined?(PryDebugger)
-        Pry.commands.alias_command 'c', 'continue'
-        Pry.commands.alias_command 's', 'step'
-        Pry.commands.alias_command 'n', 'next'
-        Pry.commands.alias_command 'f', 'finish'
-      end
+      # Debug aliases
+      Pry.commands.alias_command 'c', 'continue'
+      Pry.commands.alias_command 's', 'step'
+      Pry.commands.alias_command 'n', 'next'
+      Pry.commands.alias_command 'f', 'finish'
+      Pry.commands.alias_command 'e', 'exit'
+      Pry.commands.alias_command 'q', 'quit'
+      Pry.commands.alias_command '..', 'cd'
     end
   end
 
@@ -67,9 +65,4 @@ module Icepick
   end
 end
 
-if defined?(Rails)
-  require 'pry-rails'
-  require 'icepick/railtie'
-else
-  Icepick.initialize!
-end
+Icepick.initialize!

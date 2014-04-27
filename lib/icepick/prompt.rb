@@ -20,6 +20,15 @@ module Icepick
     # Initialize the configuration object
     self.config = Icepick::Config.new
 
+    # Public: A helper for use when assigning the prompt's to Pry
+    #
+    # Returns an Array of prompts
+    def self.pry_prompts
+      [main_prompt, wait_prompt]
+    end
+
+    protected
+
     # Public: Piece together the main prompt 
     #
     # Returns a Proc
@@ -33,8 +42,6 @@ module Icepick
     def self.wait_prompt
       prompt_proc(config.wait_layout)
     end
-
-    protected 
 
     # Internal: Build a prompt proc for a given layout
     #
@@ -62,35 +69,28 @@ module Icepick
     #
     # Returns the separator as a String
     def self.separator
-      separator = config.separator
-      config.formatted ? separator.bold : separator
+      config.separator
     end
 
     # Internal: Return the name with appropriate formatting 
     #
     # Returns a String
     def self.name
-      config.formatted? ? config.name.underline : config.name
+      config.name
     end
 
     # Internal: Helper for line number
     #
     # Returns the line number as String
     def self.line_num
-      line = self.pry.input_array.size.to_s
-      config.formatted? ? line.bold : line
+      self.pry.input_array.size.to_s
     end
 
     # Internal: Get the name of Pry's current context or target
     #
     # Returns a String
     def self.context
-      unless (context = Pry.view_clip(target)) == 'main'
-        str = "#{context.gsub(/::/, '/')}"
-        config.formatted? ? str.colorize(:blue) : str
-      else
-        ''
-      end
+      (context = Pry.view_clip(target)) == 'main' ? '~' : context.gsub(/::/, '/')
     end
 
     # Internal: Get a String of spaces matching the main prompt 
@@ -112,11 +112,8 @@ module Icepick
     #
     # Returns an Integer
     def self.prompt_size
-      old_setting      = config.formatted?
-      config.formatted = false
-      prompt           = main_prompt.call(self.target, self.level, self.pry)
-      config.formatted = old_setting
-      index            = prompt.index(config.separator) - 2
+      prompt = main_prompt.call(self.target, self.level, self.pry).uncolorize.trim
+      index  = prompt.index(config.separator) - 2
       prompt[0..index].length
     end
 
