@@ -1,3 +1,7 @@
+## 1.1.1 (2014-05-04)
+
+* Updated project dependencies
+
 ## 1.1.0 (2014-04-26)
 
 * Removed out-of-box support for Rails.  This includes removing pry-rails and railties dependencies.
