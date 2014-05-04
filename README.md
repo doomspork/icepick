@@ -1,7 +1,7 @@
 Icepick
 =======
 
-[![Gem Version](https://badge.fury.io/rb/icepick.png)](https://rubygems.org/gems/icepick) [![Code Climate](https://codeclimate.com/github/doomspork/icepick.png)](https://codeclimate.com/github/doomspork/icepick)
+[![Gem Version](https://badge.fury.io/rb/icepick.png)](https://rubygems.org/gems/icepick) [![Code Climate](https://codeclimate.com/github/doomspork/icepick.png)](https://codeclimate.com/github/doomspork/icepick) [![Dependency Status](https://gemnasium.com/doomspork/icepick.svg)](https://gemnasium.com/doomspork/icepick)
 
 [Changelog][changelog]
 
@@ -9,7 +9,7 @@ __Icepick__ bundles a set of useful tools, plugins, and configurations together:
 
 * [Pry][pry] is a powerful alternative to IRB
 * [Pry Doc][pry-doc] includes documentation and source for Core Ruby components
-* [Pry Byebug][pry-byebug] brings the power of debugging to Pry 
+* [Pry Byebug][pry-byebug] brings the power of debugging to Pry
 * [Pry Stack Explorer][pry-stack_explorer] adds support for call stack navigation
 * [Awesome Print][awesome_print] colorizes and formats output
 
