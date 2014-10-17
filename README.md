@@ -8,8 +8,10 @@ Icepick
 __Icepick__ bundles a set of useful tools, plugins, and configurations together:
 
 * [Pry][pry] is a powerful alternative to IRB
-* [Pry Doc][pry-doc] includes documentation and source for Core Ruby components
 * [Pry Byebug][pry-byebug] brings the power of debugging to Pry
+* [Pry Doc][pry-doc] includes documentation and source for Core Ruby components
+* [Pry Docmore][pry-docmore] adds additional documentation
+* [Pry Rescue][pry-rescue] start a session when and where there is an error
 * [Pry Stack Explorer][pry-stack_explorer] adds support for call stack navigation
 * [Awesome Print][awesome_print] colorizes and formats output
 
@@ -54,7 +56,7 @@ Configuration for the Pry wait prompt, defaults to `'{spaces} {separator} '`.  I
 
 ## Contributing
 
-Feedback and features welcome!  Please make use of [Issues](https://github.com/doomspork/orwell/issues) and [Pull Requests](https://github.com/doomspork/orwell/pulls), all code must have accompanying specs.
+Feedback and features welcome!  Please make use of [Issues](https://github.com/doomspork/icepick/issues) and [Pull Requests](https://github.com/doomspork/icepick/pulls), all code must have accompanying specs.
 
 ## Author/Contact
 
@@ -67,8 +69,11 @@ Icepick is made available under the [MIT](http://opensource.org/licenses/MIT) Li
 [issues]:              https://github.com/doomspork/icepick/issues
 [pullrequest]:         https://github.com/doomspork/icepick/pulls
 [changelog]:           https://github.com/doomspork/icepick/blob/master/CHANGELOG.md
-[pry]:                 http://pry.github.com
-[pry-doc]:             https://github.com/pry/pry-doc
-[pry-stack_explorer]:  https://github.com/pry/pry-stack_explorer
-[pry-byebug]:          https://github.com/deivid-rodriguez/pry-byebug
 [awesome_print]:       https://github.com/michaeldv/awesome_print
+[colorized]:           https://github.com/fazibear/colorize
+[pry-byebug]:          https://github.com/deivid-rodriguez/pry-byebug
+[pry-doc]:             https://github.com/pry/pry-doc
+[pry-docmore]:         https://github.com/rking/pry-docmore
+[pry-rescue]:          https://github.com/ConradIrwin/pry-rescue
+[pry-stack_explorer]:  https://github.com/pry/pry-stack_explorer
+[pry]:                 http://pry.github.com

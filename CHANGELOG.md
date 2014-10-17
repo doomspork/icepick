@@ -1,3 +1,9 @@
+## 1.3.0 (2014-10-17)
+
+* Added [pry-docmore][pry-docmore]
+* Added [pry-rescue][pry-rescue]
+* Updated dependencies
+
 ## 1.1.1 (2014-05-04)
 
 * Updated project dependencies
@@ -20,10 +26,11 @@
 
 * First and last release of the year.  Bundle [pry][pry] with [pry-doc][pry-doc], [pry-debugger][pry-debugger], [pry-stack_explorer][pry-stack_explorer], and [pry-rails][pry-rails].  [Awesome print][awesome_print] for colorized and formatted output.  Configured as Rails' console when applicable.
 
-[pry]:                 http://pry.github.com
-[pry-doc]:             https://github.com/pry/pry-doc
-[pry-stack_explorer]:  https://github.com/pry/pry-stack_explorer
-[pry-byebug]:          https://github.com/deivid-rodriguez/pry-byebug
-[pry-rails]:           https://github.com/rweng/pry-rails
 [awesome_print]:       https://github.com/michaeldv/awesome_print
 [colorized]:           https://github.com/fazibear/colorize
+[pry-byebug]:          https://github.com/deivid-rodriguez/pry-byebug
+[pry-doc]:             https://github.com/pry/pry-doc
+[pry-docmore]:         https://github.com/rking/pry-docmore
+[pry-rescue]:          https://github.com/ConradIrwin/pry-rescue
+[pry-stack_explorer]:  https://github.com/pry/pry-stack_explorer
+[pry]:                 http://pry.github.com
